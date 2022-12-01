@@ -26,8 +26,12 @@ object DogRepository {
         return db.dogDao().orderByName()
     }
 
-    fun createDog(dog: Dog): Unit {
+    suspend fun createDog(dog: Dog) {
         db.dogDao().createDog(dog)
+    }
+
+    suspend fun getLength(): Int {
+        return db.dogDao().getLength()
     }
 
 }

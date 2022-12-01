@@ -4,6 +4,7 @@
     package="com.katenumbers.dogbreedsquiz">
 
     <application
+        android:name=".DogApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,7 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/dog_launcher_round"
         android:supportsRtl="true"
+        android:windowSplashScreenBackground="#1d73ee"
         android:theme="@style/Theme.DogBreedsQuiz"
+
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"

@@ -17,5 +17,8 @@ interface DogDAO {
     suspend fun orderByName(): List<Dog>
 
     @Insert
-    fun createDog(dog: Dog)
+    suspend fun createDog(dog: Dog)
+
+    @Query("SELECT COUNT(*) FROM dog")
+    suspend fun getLength(): Int
 }

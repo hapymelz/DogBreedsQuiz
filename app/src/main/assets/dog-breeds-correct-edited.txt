@@ -1,4 +1,3 @@
-id,name,section,group,country,image
 0, ENGLISH SETTER, Pointing Dogs, British and Irish Pointers and Setters, GREAT BRITAIN,/002g07.jpg
 1, KERRY BLUE TERRIER, Terriers, Large and medium sized Terriers, IRELAND, /kerryblueterrier.jpg
 2, CAIRN TERRIER, Terriers, Small sized Terriers, GREAT BRITAIN,/004g03.jpg

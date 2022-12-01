@@ -11,17 +11,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val viewModel = DogViewModel()
+
+        val lenData = viewModel.getLength()
+
         val mInput = InputStreamReader(assets.open("dog-breeds-correct-edited.txt"))
         val reader = BufferedReader(mInput)
 
         var line : String
 
         while (reader.readLine().also { line = it } != null) {
-            val row : List<String> = line.split(",")
-            val dog = Dog(id = 0, name = row[1], section = row[2], group = row[3], country = row[4], image = row[5])
-            DogRepository.createDog(dog)
+            val row: List<String> = line.split(",")
+            viewModel.createDog(row)
         }
 
-
     }
+
 }
