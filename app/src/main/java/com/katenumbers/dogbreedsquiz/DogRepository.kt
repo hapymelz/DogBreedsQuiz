@@ -2,6 +2,7 @@ package com.katenumbers.dogbreedsquiz
 
 import androidx.room.Room
 import com.katenumbers.dogbreedsquiz.models.Dog
+import com.katenumbers.dogbreedsquiz.models.TableMade
 
 object DogRepository {
     private val db: AppDatabase
@@ -10,7 +11,7 @@ object DogRepository {
         db = Room.databaseBuilder(
             DogApplication.getInstance(),
             AppDatabase::class.java,
-            "dog"
+            "Dog Database"
         ).build()
     }
 
@@ -34,4 +35,23 @@ object DogRepository {
         return db.dogDao().getLength()
     }
 
+    suspend fun createLoaded(tableMade: TableMade) {
+        db.dogDao().createLoaded(tableMade)
+    }
+
+    suspend fun isLoaded(id: Int): String {
+        return db.dogDao().isLoaded(id)
+    }
+
+    suspend fun updateLoaded(tableMade: TableMade) {
+        db.dogDao().updateLoaded(tableMade)
+    }
+
+    suspend fun deleteUnused(id: Int) {
+        db.dogDao().deleteUnused(id)
+    }
+
+    suspend fun getRandom(n: Int): List<Dog> {
+        return db.dogDao().getRandom(n)
+    }
 }

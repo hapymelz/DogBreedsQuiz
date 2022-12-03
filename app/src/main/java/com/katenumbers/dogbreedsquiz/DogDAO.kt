@@ -3,7 +3,9 @@ package com.katenumbers.dogbreedsquiz
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.katenumbers.dogbreedsquiz.models.Dog
+import com.katenumbers.dogbreedsquiz.models.TableMade
 
 @Dao
 interface DogDAO {
@@ -21,4 +23,19 @@ interface DogDAO {
 
     @Query("SELECT COUNT(*) FROM dog")
     suspend fun getLength(): Int
+
+    @Insert
+    suspend fun createLoaded(tableMade: TableMade)
+
+    @Query("SELECT loaded FROM tablemade WHERE id = :id")
+    suspend fun isLoaded(id: Int): String
+
+    @Update
+    suspend fun updateLoaded(tableMade: TableMade)
+
+    @Query("DELETE FROM tablemade WHERE id != :id")
+    suspend fun deleteUnused(id: Int)
+
+    @Query("SELECT * FROM DOG ORDER BY RANDOM() LIMIT :n")
+    suspend fun getRandom(n: Int): List<Dog>
 }
