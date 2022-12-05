@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.katenumbers.dogbreedsquiz.models.Dog
 import com.katenumbers.dogbreedsquiz.models.TableMade
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class DogViewModel: ViewModel() {
     private var dogs : List<Dog> = listOf()
@@ -20,17 +20,14 @@ class DogViewModel: ViewModel() {
     }
 
 
-    fun createDog(row: List<String>) {
+    fun createDog(row: List<String>, resourceID: Int) {
         viewModelScope.launch {
-            val dog = Dog(id = 0, name = row[1], section = row[2], group = row[3], country = row[4], image = row[5])
+            val dog = Dog(id = 0, name = row[1], section = row[2], group = row[3], country = row[4], image = resourceID)
             DogRepository.createDog(dog)
         }
     }
 
     fun getLength(): Int {
-        if (dogs == null) {
-            return 0
-        }
         return dogs.size
     }
 
@@ -44,7 +41,9 @@ class DogViewModel: ViewModel() {
     fun isLoaded(id: Int): String {
         var loaded = ""
         viewModelScope.launch {
-            loaded = DogRepository.isLoaded(id)
+            val table = DogRepository.isLoaded(id)
+            loaded = table[0]
+            println("LOADED FROM DVM: __${loaded}__")
         }
         return loaded
     }
@@ -73,8 +72,23 @@ class DogViewModel: ViewModel() {
     fun orderByName(): List<Dog> {
         var dogsInOrder : List<Dog> = listOf()
         viewModelScope.launch {
-            dogsInOrder = DogRepository.orderByName()
+            var block = async(Dispatchers.IO) { dogsInOrder = DogRepository.orderByName() }
+            block.await()
         }
         return dogsInOrder
     }
+
+    fun deleteExtras() {
+        viewModelScope.launch {
+            DogRepository.deleteExtras()
+        }
+    }
+
+//    fun getFirstRow(): Dog {
+//        var dog : Dog
+//        viewModelScope.launch {
+//            dog = DogRepository.getFirstRow()
+//        }
+//        return dog
+//    }
 }

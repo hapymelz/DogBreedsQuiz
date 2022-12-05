@@ -6,6 +6,8 @@ import com.katenumbers.dogbreedsquiz.models.TableMade
 
 object DogRepository {
     private val db: AppDatabase
+    private var dogCache : List<Dog> = listOf()
+    private var cacheInitialized = false
 
     init {
         db = Room.databaseBuilder(
@@ -16,7 +18,11 @@ object DogRepository {
     }
 
     suspend fun getAll(): List<Dog> {
-        return db.dogDao().getAll()
+        if (!cacheInitialized) {
+            dogCache = db.dogDao().getAll()
+            cacheInitialized = true
+        }
+        return dogCache
     }
 
     suspend fun findByName(name: String): Dog {
@@ -39,7 +45,7 @@ object DogRepository {
         db.dogDao().createLoaded(tableMade)
     }
 
-    suspend fun isLoaded(id: Int): String {
+    suspend fun isLoaded(id: Int): List<String> {
         return db.dogDao().isLoaded(id)
     }
 
@@ -53,5 +59,13 @@ object DogRepository {
 
     suspend fun getRandom(n: Int): List<Dog> {
         return db.dogDao().getRandom(n)
+    }
+
+    suspend fun getFirstRow(): Dog {
+        return db.dogDao().getFirstRow()
+    }
+
+    suspend fun  deleteExtras() {
+        return db.dogDao().deleteExtras()
     }
 }

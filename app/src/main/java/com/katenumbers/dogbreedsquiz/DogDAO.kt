@@ -28,7 +28,7 @@ interface DogDAO {
     suspend fun createLoaded(tableMade: TableMade)
 
     @Query("SELECT loaded FROM tablemade WHERE id = :id")
-    suspend fun isLoaded(id: Int): String
+    suspend fun isLoaded(id: Int): List<String>
 
     @Update
     suspend fun updateLoaded(tableMade: TableMade)
@@ -36,6 +36,12 @@ interface DogDAO {
     @Query("DELETE FROM tablemade WHERE id != :id")
     suspend fun deleteUnused(id: Int)
 
-    @Query("SELECT * FROM DOG ORDER BY RANDOM() LIMIT :n")
+    @Query("SELECT * FROM dog ORDER BY RANDOM() LIMIT :n")
     suspend fun getRandom(n: Int): List<Dog>
+
+    @Query("SELECT * FROM dog WHERE id = 1")
+    suspend fun getFirstRow(): Dog
+
+    @Query("DELETE FROM dog WHERE id NOT BETWEEN 1 AND 353")
+    suspend fun deleteExtras()
 }
