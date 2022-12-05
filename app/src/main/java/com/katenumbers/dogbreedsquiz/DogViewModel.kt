@@ -1,5 +1,7 @@
 package com.katenumbers.dogbreedsquiz
 
+import androidx.databinding.ObservableArrayList
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.katenumbers.dogbreedsquiz.models.Dog
@@ -7,7 +9,10 @@ import com.katenumbers.dogbreedsquiz.models.TableMade
 import kotlinx.coroutines.*
 
 class DogViewModel: ViewModel() {
-    private var dogs : List<Dog> = listOf()
+    var dogsInOrder = ObservableArrayList<Dog>()
+    var dogsLoadedInOrder = MutableLiveData(false)
+    var dogs = ObservableArrayList<Dog>()
+    var dogsLoaded = MutableLiveData(false)
 
     init {
         loadDogs()
@@ -15,10 +20,11 @@ class DogViewModel: ViewModel() {
     private fun loadDogs() {
         viewModelScope.launch {
             val loadedDogs = DogRepository.getAll()
-            dogs = loadedDogs
+            dogs.addAll(loadedDogs)
+            val loadedDogsInOrder = DogRepository.orderByName()
+            dogsInOrder.addAll(loadedDogsInOrder)
         }
     }
-
 
     fun createDog(row: List<String>, resourceID: Int) {
         viewModelScope.launch {
@@ -69,13 +75,12 @@ class DogViewModel: ViewModel() {
         return randDogs
     }
 
-    fun orderByName(): List<Dog> {
-        var dogsInOrder : List<Dog> = listOf()
+    fun orderByName() {
         viewModelScope.launch {
-            var block = async(Dispatchers.IO) { dogsInOrder = DogRepository.orderByName() }
-            block.await()
+            val dogsList = DogRepository.orderByName()
+            dogsInOrder.addAll(dogsList)
+            dogsLoadedInOrder.value = true
         }
-        return dogsInOrder
     }
 
     fun deleteExtras() {
@@ -83,6 +88,7 @@ class DogViewModel: ViewModel() {
             DogRepository.deleteExtras()
         }
     }
+
 
 //    fun getFirstRow(): Dog {
 //        var dog : Dog

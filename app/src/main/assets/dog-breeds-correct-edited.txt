@@ -40,7 +40,7 @@
 39, APPENZELL CATTLE DOG, Pinscher and Schnauzer, Swiss Mountain- and Cattledogs, SWITZERLAND,/046g02.jpg
 40, ENTLEBUCH CATTLE DOG, Pinscher and Schnauzer, Swiss Mountain- and Cattledogs, SWITZERLAND,/047g02.jpg
 41, KARELIAN BEAR DOG, Spitz and primitive types, Nordic Hunting Dogs, FINLAND, /karelianbeardog.jpg
-42, FINNISH SPITZ, Spitz and primitive types, Nordic Hunting Dogs, FINLAND,/049g05-1.jpg
+42, FINNISH SPITZ, Spitz and primitive types, Nordic Hunting Dogs, FINLAND,/049g05_1.jpg
 43, NEWFOUNDLAND, Pinscher and Schnauzer, Molossian type, CANADA, /newfoundland.jpg
 44, FINNISH HOUND, Scent hounds and related breeds, Scent hounds, FINLAND, /finnishhound.jpg
 45, POLISH HOUND, Scent hounds and related breeds, Scent hounds, POLAND,/052g06.jpg
@@ -51,8 +51,8 @@
 50, HUNGARIAN SHORT-HAIRED POINTER (VIZSLA), Pointing Dogs, Continental Pointing Dogs, HUNGARY,/057g07.jpg
 51, GREAT SWISS MOUNTAIN DOG, Pinscher and Schnauzer, Swiss Mountain- and Cattledogs, SWITZERLAND,/058g02.jpg
 52, SWISS HOUND, Scent hounds and related breeds, Scent hounds, SWITZERLAND, /swisshound.jpg
-53, SMALL SWISS HOUND, Scent hounds and related breeds, Scent hounds, SWITZERLAND,/060g06-1.jpg
-54, ST. BERNARD, Pinscher and Schnauzer, Molossian type, SWITZERLAND,/061g02-1.jpg
+53, SMALL SWISS HOUND, Scent hounds and related breeds, Scent hounds, SWITZERLAND,/060g06_1.jpg
+54, ST. BERNARD, Pinscher and Schnauzer, Molossian type, SWITZERLAND,/061g02_1.jpg
 55, COARSE-HAIRED STYRIAN HOUND, Scent hounds and related breeds, Scent hounds, AUSTRIA,/062g06.jpg
 56, AUSTRIAN BLACK AND TAN HOUND, Scent hounds and related breeds, Scent hounds, AUSTRIA,/063g06.jpg
 57, AUSTRIAN  PINSCHER, Pinscher and Schnauzer, Pinscher and Schnauzer type, AUSTRIA, /austrianpinscher.jpg
@@ -83,16 +83,16 @@
 82, SPANISH MASTIFF, Pinscher and Schnauzer, Molossian type, SPAIN, /spanishmastiff.jpg
 83, PYRENEAN MASTIFF, Pinscher and Schnauzer, Molossian type, SPAIN, /pyreneanmastiff.jpg
 84, PORTUGUESE SHEEPDOG, Sheepdogs and Cattledogs, Sheepdogs, PORTUGAL,/093g01.jpg
-85, PORTUGUESE WARREN HOUND-PORTUGUESE PODENGO, Spitz and primitive types, Primitive type - Hunting Dogs, PORTUGAL,/094g05-1.jpg
+85, PORTUGUESE WARREN HOUND-PORTUGUESE PODENGO, Spitz and primitive types, Primitive type - Hunting Dogs, PORTUGAL,/094g05_1.jpg
 86, BRITTANY SPANIEL, Pointing Dogs, Continental Pointing Dogs, FRANCE, /brittany.jpg
 87, RAFEIRO OF ALENTEJO, Pinscher and Schnauzer, Molossian type, PORTUGAL,/096g02.jpg
-88, GERMAN SPITZ, Spitz and primitive types, European Spitz, GERMANY,/097g05-1.jpg
+88, GERMAN SPITZ, Spitz and primitive types, European Spitz, GERMANY,/097g05_1.jpg
 89, GERMAN WIRE- HAIRED POINTING DOG, Pointing Dogs, Continental Pointing Dogs, GERMANY,/098g07.jpg
-90, WEIMARANER, Pointing Dogs, Continental Pointing Dogs, GERMANY,/099g07-2.jpg
+90, WEIMARANER, Pointing Dogs, Continental Pointing Dogs, GERMANY,/099g07_1.jpg
 91, WESTPHALIAN DACHSBRACKE, Scent hounds and related breeds, Scent hounds, GERMANY, /westphaliandachsbracke.jpg
 92, FRENCH BULLDOG, Companion and Toy Dogs, Small Molossian type Dogs, FRANCE,/101g09.jpg
 93, KLEINER MUNSTERLANDER, Pointing Dogs, Continental Pointing Dogs, GERMANY, /kleinermunsterlander.jpg
-94, GERMAN HUNTING TERRIER, Terriers, Large and medium sized Terriers, GERMANY,/103g03-1.jpg
+94, GERMAN HUNTING TERRIER, Terriers, Large and medium sized Terriers, GERMANY,/103g03_1.jpg
 95, GERMAN SPANIEL, Retrievers, Flushing Dogs, GERMANY,/104g08.jpg
 96, FRENCH WATER DOG, Retrievers, Water Dogs, FRANCE, /frenchwaterdog.jpg
 97, BLUE PICARDY SPANIEL, Pointing Dogs, Continental Pointing Dogs, FRANCE, /bluepicardyspaniel.jpg
@@ -136,7 +136,7 @@
 135, LEONBERGER, Pinscher and Schnauzer, Molossian type, GERMANY, /leonberger.jpg
 136, RHODESIAN RIDGEBACK, Scent hounds and related breeds, Related breeds, SOUTH AFRICA, /rhodesianridgeback.jpg
 137, ROTTWEILER, Pinscher and Schnauzer, Molossian type, GERMANY, /rottweiler.jpg
-138, DACHSHUND, Dachshunds, BLANK, GERMANY,/148g04-1.jpg
+138, DACHSHUND, Dachshunds, BLANK, GERMANY,/148g04_1.jpg
 139, BULLDOG, Pinscher and Schnauzer, Molossian type, GREAT BRITAIN,/149g02.jpg
 140, SERBIAN HOUND, Scent hounds and related breeds, Scent hounds, SERBIA,/150g06.jpg
 141, ISTRIAN SHORT-HAIRED HOUND, Scent hounds and related breeds, Scent hounds, CROATIA,/151g06.jpg
@@ -154,7 +154,7 @@
 153, BASSET HOUND, Scent hounds and related breeds, Scent hounds, GREAT BRITAIN,/163g06.jpg
 154, DEERHOUND, Sighthounds, Rough-haired Sighthounds, GREAT BRITAIN,/164g10.jpg
 155, ITALIAN SPINONE, Pointing Dogs, Continental Pointing Dogs, ITALY, /italianspinone.jpg
-156, GERMAN SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, GERMANY,/166g01-1.jpg
+156, GERMAN SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, GERMANY,/166g01_1.jpg
 157, AMERICAN COCKER SPANIEL, Retrievers, Flushing Dogs, UNITED STATES OF AMERICA, /americancockerspaniel.jpg
 158, DANDIE DINMONT TERRIER, Terriers, Small sized Terriers, GREAT BRITAIN,/168g03.jpg
 159, FOX TERRIER (WIRE), Terriers, Large and medium sized Terriers, GREAT BRITAIN,/169g03.jpg
@@ -175,7 +175,7 @@
 174, AFFENPINSCHER, Pinscher and Schnauzer, Pinscher and Schnauzer type, GERMANY,/186g02.jpg
 175, PORTUGUESE POINTING DOG, Pointing Dogs, Continental Pointing Dogs, PORTUGAL,/187g07.jpg
 176, SLOUGHI, Sighthounds, Short-haired Sighthounds, MOROCCO, /sloughi.jpg
-177, FINNISH LAPPONIAN DOG, Spitz and primitive types, Nordic Watchdogs and Herders, FINLAND,/189g05-1.jpg
+177, FINNISH LAPPONIAN DOG, Spitz and primitive types, Nordic Watchdogs and Herders, FINLAND,/189g05_1.jpg
 178, HOVAWART, Pinscher and Schnauzer, Molossian type, GERMANY, /hovawart.jpg
 179, BOUVIER DES FLANDRES, Sheepdogs and Cattledogs, Cattledogs (except Swiss Cattledogs), BELGIUM AND FRANCE, /bouvierdesflandres.jpg
 180, KROMFOHRLANDER, Companion and Toy Dogs, Kromfohrländer, GERMANY,/192g09.jpg
@@ -185,7 +185,7 @@
 184, BOLOGNESE, Companion and Toy Dogs, Bichons and related breeds, ITALY, /bolognese.jpg
 185, NEAPOLITAN MASTIFF, Pinscher and Schnauzer, Molossian type, ITALY, /neopolitanmastiff.jpg
 186, ITALIAN ROUGH-HAIRED SEGUGIO, Scent hounds and related breeds, Scent hounds, ITALY, /italianroughhairedsegugio.jpg
-187, CIRNECO DELL'ETNA, Spitz and primitive types, Primitive type - Hunting Dogs, ITALY,/199g05-1.jpg
+187, CIRNECO DELL'ETNA, Spitz and primitive types, Primitive type - Hunting Dogs, ITALY,/199g05_1.jpg
 188, ITALIAN GREYHOUND, Sighthounds, Short-haired Sighthounds, ITALY, /italiangreyhound.jpg
 189, MAREMMA ABRUZZES SHEEPDOG, Sheepdogs and Cattledogs, Sheepdogs, ITALY, /maremmaabruzzessheepdog.jpg
 190, ITALIAN POINTING DOG, Pointing Dogs, Continental Pointing Dogs, ITALY,/202g07.jpg
@@ -198,18 +198,18 @@
 197, TIBETAN TERRIER, Companion and Toy Dogs, Tibetan breeds, Tibet (China),/209g09.jpg
 198, CANADIAN ESKIMO DOG, Spitz and primitive types, Nordic Sledge Dogs, CANADA,/211g05.jpg
 199, SAMOYED, Spitz and primitive types, Nordic Sledge Dogs, NORTHERN RUSSIA AND SIBERIA,/212g05.jpg
-200, HANOVERIAN SCENT HOUND, Scent hounds and related breeds, Leash (scent) Hounds, GERMANY,/213g06-1.jpg
+200, HANOVERIAN SCENT HOUND, Scent hounds and related breeds, Leash (scent) Hounds, GERMANY,/213g06_1.jpg
 201, HELLENIC HOUND, Scent hounds and related breeds, Scent hounds, GREECE, /hellenichound.jpg
-202, BICHON FRISE, Companion and Toy Dogs, Bichons and related breeds, BELGIUM AND FRANCE,/215g09-1.jpg
+202, BICHON FRISE, Companion and Toy Dogs, Bichons and related breeds, BELGIUM AND FRANCE,/215g09_1.jpg
 203, PUDELPOINTER, Pointing Dogs, Continental Pointing Dogs, GERMANY, /pudelpointer.jpg
-204, BAVARIAN MOUNTAIN SCENT HOUND, Scent hounds and related breeds, Leash (scent) Hounds, GERMANY,/217g06-1.jpg
-205, CHIHUAHUA, Companion and Toy Dogs, Chihuahueno, MEXICO,/218g09-1.jpg
+204, BAVARIAN MOUNTAIN SCENT HOUND, Scent hounds and related breeds, Leash (scent) Hounds, GERMANY,/217g06_1.jpg
+205, CHIHUAHUA, Companion and Toy Dogs, Chihuahueno, MEXICO,/218g09_1.jpg
 206, FRENCH TRICOLOUR HOUND, Scent hounds and related breeds, Scent hounds, FRANCE, /frenchtricolourhound.jpg
 207, FRENCH WHITE & BLACK HOUND, Scent hounds and related breeds, Scent hounds, FRANCE,/220g06.jpg
 208, FRISIAN WATER DOG, Retrievers, Water Dogs, THE NETHERLANDS, /frisianwaterdog.jpg
-209, STABIJHOUN, Pointing Dogs, Continental Pointing Dogs, THE NETHERLANDS,/222g07-1.jpg
+209, STABIJHOUN, Pointing Dogs, Continental Pointing Dogs, THE NETHERLANDS,/222g07_1.jpg
 210, DUTCH SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, THE NETHERLANDS, /dutchshepherddog.jpg
-211, DRENTSCHE PARTRIDGE DOG, Pointing Dogs, Continental Pointing Dogs, THE NETHERLANDS,/224g07-1.jpg
+211, DRENTSCHE PARTRIDGE DOG, Pointing Dogs, Continental Pointing Dogs, THE NETHERLANDS,/224g07_1.jpg
 212, FILA BRASILEIRO, Pinscher and Schnauzer, Molossian type, BRAZIL,/225g02.jpg
 213, LANDSEER (EUROPEAN CONTINENTAL TYPE), Pinscher and Schnauzer, Molossian type, GERMANY AND SWITZERLAND, /landseer.jpg
 214, LHASA APSO, Companion and Toy Dogs, Tibetan breeds, Tibet (China),/227g09.jpg
@@ -219,7 +219,7 @@
 218, TIBETAN SPANIEL, Companion and Toy Dogs, Tibetan breeds, Tibet (China),/231g09.jpg
 219, DEUTSCH STICHELHAAR, Pointing Dogs, Continental Pointing Dogs, GERMANY,/232g07.jpg
 220, LITTLE LION DOG, Companion and Toy Dogs, Bichons and related breeds, FRANCE,/233g09.jpg
-221, XOLOITZCUINTLE, Spitz and primitive types, Primitive type, MEXICO,/234g05-1.jpg
+221, XOLOITZCUINTLE, Spitz and primitive types, Primitive type, MEXICO,/234g05_1.jpg
 222, GREAT DANE, Pinscher and Schnauzer, Molossian type, GERMANY,/235g02.jpg
 223, AUSTRALIAN SILKY TERRIER, Terriers, Toy Terriers, AUSTRALIA,/236g03.jpg
 224, NORWEGIAN BUHUND, Spitz and primitive types, Nordic Watchdogs and Herders, NORWAY,/237g05.jpg
@@ -273,30 +273,30 @@
 272, CHINESE CRESTED DOG, Companion and Toy Dogs, Hairless Dogs, CHINA,/288g09.jpg
 273, ICELANDIC SHEEPDOG, Spitz and primitive types, Nordic Watchdogs and Herders, ICELAND,/289g05.jpg
 274, BEAGLE HARRIER, Scent hounds and related breeds, Scent hounds, FRANCE, /beagleharrier.jpg
-275, EURASIAN, Spitz and primitive types, Asian Spitz and related breeds, GERMANY,/291g05-1.jpg
+275, EURASIAN, Spitz and primitive types, Asian Spitz and related breeds, GERMANY,/291g05_1.jpg
 276, DOGO ARGENTINO, Pinscher and Schnauzer, Molossian type, ARGENTINA,/292g02.jpg
 277, AUSTRALIAN KELPIE, Sheepdogs and Cattledogs, Sheepdogs, AUSTRALIA,/293g01.jpg
 278, OTTERHOUND, Scent hounds and related breeds, Scent hounds, GREAT BRITAIN,/294g06.jpg
 279, HARRIER, Scent hounds and related breeds, Scent hounds, GREAT BRITAIN, /harrier.jpg
 280, COLLIE SMOOTH, Sheepdogs and Cattledogs, Sheepdogs, GREAT BRITAIN,/296g01.jpg
 281, BORDER COLLIE, Sheepdogs and Cattledogs, Sheepdogs, GREAT BRITAIN,/297g01.jpg
-282, ROMAGNA WATER DOG, Retrievers, Water Dogs, ITALY,/298g08-1.jpg
+282, ROMAGNA WATER DOG, Retrievers, Water Dogs, ITALY,/298g08_1.jpg
 283, GERMAN HOUND, Scent hounds and related breeds, Scent hounds, GERMANY, /germanhound.jpg
-284, BLACK AND TAN COONHOUND, Scent hounds and related breeds, Scent hounds, UNITED STATES OF AMERICA,/300g06.jpg
+284, BLACK AND TAN COONHOUND, Scent hounds and related breeds, Scent hounds, UNITED STATES OF AMERICA,/blackandtancoonhound.jpg
 285, AMERICAN WATER SPANIEL, Retrievers, Water Dogs, UNITED STATES OF AMERICA, /americanwaterspaniel.jpg
 286, IRISH GLEN OF IMAAL TERRIER, Terriers, Large and medium sized Terriers, IRELAND, /irishglenofimaalterrier.jpg
 287, AMERICAN FOXHOUND, Scent hounds and related breeds, Scent hounds, UNITED STATES OF AMERICA, /americanfoxhound.jpg
 288, RUSSIAN-EUROPEAN LAIKA, Spitz and primitive types, Nordic Hunting Dogs, RUSSIAN FEDERATION, /russianeuropeanlaika.jpg
-289, EAST SIBERIAN LAIKA, Spitz and primitive types, Nordic Hunting Dogs, RUSSIAN FEDERATION,/305g05-1.jpg
+289, EAST SIBERIAN LAIKA, Spitz and primitive types, Nordic Hunting Dogs, RUSSIAN FEDERATION,/305g05_1.jpg
 290, WEST SIBERIAN LAIKA, Spitz and primitive types, Nordic Hunting Dogs, RUSSIAN FEDERATION,/306g05.jpg
-291, AZAWAKH, Sighthounds, Short-haired Sighthounds, MALI,/307g10-1.jpg
+291, AZAWAKH, Sighthounds, Short-haired Sighthounds, MALI,/307g10_1.jpg
 292, DUTCH SMOUSHOND, Pinscher and Schnauzer, Pinscher and Schnauzer type, THE NETHERLANDS, /dutchsmoushond.jpg
 293, SHAR PEI, Pinscher and Schnauzer, Molossian type, CHINA, /sharpei.jpg
 294, PERUVIAN HAIRLESS DOG, Spitz and primitive types, Primitive type, PERU,/310g05.jpg
-295, SAARLOOS WOLFHOND, Sheepdogs and Cattledogs, Sheepdogs, THE NETHERLANDS,/311g01-1.jpg
+295, SAARLOOS WOLFHOND, Sheepdogs and Cattledogs, Sheepdogs, THE NETHERLANDS,/311g01_1.jpg
 296, DUCK TOLLING RETRIEVER, Retrievers, Retrievers, CANADA, /ducktollingretriever.jpg
-297, DUTCH SCHAPENDOES, Sheepdogs and Cattledogs, Sheepdogs, THE NETHERLANDS,/313g01-1.jpg
-298, NEDERLANDSE KOOIKERHONDJE, Retrievers, Flushing Dogs, THE NETHERLANDS,/314g08-1.jpg
+297, DUTCH SCHAPENDOES, Sheepdogs and Cattledogs, Sheepdogs, THE NETHERLANDS,/313g01_1.jpg
+298, NEDERLANDSE KOOIKERHONDJE, Retrievers, Flushing Dogs, THE NETHERLANDS,/314g08_1.jpg
 299, BROHOLMER, Pinscher and Schnauzer, Molossian type, DENMARK,/315g02.jpg
 300, FRENCH WHITE AND ORANGE HOUND, Scent hounds and related breeds, Scent hounds, FRANCE, /frenchwhiteandorangehound.jpg
 301, KAI, Spitz and primitive types, Asian Spitz and related breeds, JAPAN,/317g05.jpg
@@ -317,7 +317,7 @@
 316, CZECHOSLOVAKIAN WOLFDOG, Sheepdogs and Cattledogs, Sheepdogs, SLOVAKIA, /czechoslovakianwolfdog.jpg
 317, POLISH GREYHOUND, Sighthounds, Short-haired Sighthounds, POLAND, /polishgreyhound.jpg
 318, KOREA JINDO DOG, Spitz and primitive types, Asian Spitz and related breeds, KOREA (REPUBLIC OF),/334g05.jpg
-319, CENTRAL ASIA SHEPHERD DOG, Pinscher and Schnauzer, Molossian type, RUSSIAN FEDERATION,/335g02-1.jpg
+319, CENTRAL ASIA SHEPHERD DOG, Pinscher and Schnauzer, Molossian type, RUSSIAN FEDERATION,/335g02_1.jpg
 320, SPANISH WATER DOG, Retrievers, Water Dogs, SPAIN, /spanishwaterdog.jpg
 321, ITALIAN SHORT-HAIRED SEGUGIO, Scent hounds and related breeds, Scent hounds, ITALY,/337g06.jpg
 322, THAI RIDGEBACK DOG, Spitz and primitive types, Primitive type - Hunting Dogs, THAILAND, /thairidgebackdog.jpg
@@ -327,14 +327,14 @@
 326, AUSTRALIAN SHEPHERD, Sheepdogs and Cattledogs, Sheepdogs, UNITED STATES OF AMERICA, /australianshepherd.jpg
 327, ITALIAN CANE CORSO, Pinscher and Schnauzer, Molossian type, ITALY, /canecorso.jpg
 328, AMERICAN AKITA, Spitz and primitive types, Asian Spitz and related breeds, JAPAN, /americanakita.jpg
-329, JACK RUSSELL TERRIER, Terriers, Small sized Terriers, GREAT BRITAIN,/345g03-1.jpg
+329, JACK RUSSELL TERRIER, Terriers, Small sized Terriers, GREAT BRITAIN,/345g03_1.jpg
 330, PRESA CANARIO, Pinscher and Schnauzer, Molossian type, SPAIN, /presacanario.jpg
-331, WHITE SWISS SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, SWITZERLAND,/347g01-1.jpg
+331, WHITE SWISS SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, SWITZERLAND,/347g01_1.jpg
 332, TAIWAN DOG, Spitz and primitive types, Primitive type - Hunting Dogs, TAIWAN,/348g05.jpg
 333, ROMANIAN MIORITIC SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, ROMANIA, /romanianmioriticshepherddog.jpg
 334, ROMANIAN CARPATHIAN SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, ROMANIA,/350g01.jpg
 335, AUSTRALIAN STUMPY TAIL CATTLE DOG, Sheepdogs and Cattledogs, Cattledogs (except Swiss Cattledogs), AUSTRALIA, /australianstumpytailcattledog.jpg
-336, RUSSIAN TOY, Companion and Toy Dogs, Continental Toy Spaniel and others, RUSSIAN FEDERATION,/352g09-1.jpg
+336, RUSSIAN TOY, Companion and Toy Dogs, Continental Toy Spaniel and others, RUSSIAN FEDERATION,/352g09_1.jpg
 337, CIMARRON URUGUAYO, Pinscher and Schnauzer, Molossian type, URUGUAY, /cimarronuruguayo.jpg
 338, POLISH HUNTING DOG, Scent hounds and related breeds, Scent hounds, POLAND, /polishhuntingdog.jpg
 339, BOSNIAN AND HERZEGOVINIAN - CROATIAN SHEPHERD DOG, Pinscher and Schnauzer, Molossian type, BOSNIA AND HERZEGOVINA AND CROATIA,/355g02.jpg
@@ -343,11 +343,11 @@
 342, THAI BANGKAEW DOG, Spitz and primitive types, Asian Spitz and related breeds, THAILAND,/358g05.jpg
 343, MINIATURE BULL TERRIER, Terriers, Bull type Terriers, GREAT BRITAIN,/359g03.jpg
 344, LANCASHIRE HEELER, Sheepdogs and Cattledogs, Sheepdogs, ENGLAND,/360g01.jpg
-345, SEGUGIO MAREMMANO, Scent hounds and related breeds, Scent hounds, ITALY,/361g06-1.jpg
+345, SEGUGIO MAREMMANO, Scent hounds and related breeds, Scent hounds, ITALY,/361g06_1.jpg
 346, KINTAMANI-BALI DOG, Spitz and primitive types, Asian Spitz and related breeds, INDONESIA,/362g05.jpg
-347, PRAGUE RATTER, Companion and Toy Dogs, Continental Toy Spaniel and others, CZECH REPUBLIC,/363g09-1.jpg
-348, BOHEMIAN SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, CZECH REPUBLIC,/364g01-1.jpg
-349, YAKUTIAN LAIKA, Spitz and primitive types, Nordic Sledge Dogs, RUSSIAN FEDERATION,/365g05-1.jpg
+347, PRAGUE RATTER, Companion and Toy Dogs, Continental Toy Spaniel and others, CZECH REPUBLIC,/363g09_1.jpg
+348, BOHEMIAN SHEPHERD DOG, Sheepdogs and Cattledogs, Sheepdogs, CZECH REPUBLIC,/364g01_1.jpg
+349, YAKUTIAN LAIKA, Spitz and primitive types, Nordic Sledge Dogs, RUSSIAN FEDERATION,/365g05_1.jpg
 350, ESTONIAN HOUND, Scent hounds and related breeds, Scent hounds, ESTONIA,/366g06.jpg
 351, MINIATURE AMERICAN SHEPHERD, Sheepdogs and Cattledogs, Sheepdogs, UNITED STATES OF AMERICA, /miniatureamericanshepherd.jpg
 352, TRANSMONTANO MASTIFF, Pinscher and Schnauzer, Molossian type, PORTUGAL,/368g02.jpg

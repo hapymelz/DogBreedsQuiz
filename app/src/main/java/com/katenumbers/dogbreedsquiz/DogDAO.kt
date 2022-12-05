@@ -15,7 +15,7 @@ interface DogDAO {
     @Query("SELECT * FROM dog WHERE name LIKE :name")
     suspend fun findByName(name: String): Dog
 
-    @Query("SELECT * FROM dog ORDER BY name")
+    @Query("SELECT DISTINCT * FROM dog ORDER BY name")
     suspend fun orderByName(): List<Dog>
 
     @Insert

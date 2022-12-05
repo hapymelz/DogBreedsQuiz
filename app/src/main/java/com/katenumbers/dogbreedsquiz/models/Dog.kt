@@ -14,5 +14,5 @@ data class Dog (
     @ColumnInfo(name = "section") var section : String,
     @ColumnInfo(name = "group") var group : String,
     @ColumnInfo(name = "country") var country : String,
-    @ColumnInfo(name = "image") var image: Int,
+    @ColumnInfo(name = "image") @DrawableRes var image: Int,
     )

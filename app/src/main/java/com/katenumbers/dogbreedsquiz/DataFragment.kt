@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.katenumbers.dogbreedsquiz.databinding.FragmentDataBinding
@@ -16,8 +17,9 @@ class DataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentDataBinding.inflate(inflater, container, false)
-        val viewModel = DogViewModel()
-        val dogsInOrder = viewModel.orderByName().toList()
+        val viewModel : DogViewModel by activityViewModels()
+
+
 
         println("ORDERING DOGS...")
 
@@ -26,8 +28,10 @@ class DataFragment : Fragment() {
         }
 
 
-        binding.recyclerView.adapter = DogAdapter(dogsInOrder, ::onDogClick)
+
+        binding.recyclerView.adapter = DogAdapter(viewModel.dogsInOrder)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
+
 
         return binding.root
     }

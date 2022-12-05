@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.katenumbers.dogbreedsquiz.databinding.FragmentHomeBinding
+import com.katenumbers.dogbreedsquiz.models.Dog
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -14,9 +16,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val viewModel : DogViewModel by activityViewModels()
+        val dogsInOrder = viewModel.orderByName()
+
 
         binding.dataButton.setOnClickListener {
-            findNavController().navigate(R.id.home_to_data)
+            if (viewModel.dogsLoadedInOrder.value == true) {
+                findNavController().navigate(R.id.home_to_data)
+            }
         }
 
 
