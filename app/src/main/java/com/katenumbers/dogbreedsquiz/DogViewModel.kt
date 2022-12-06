@@ -16,7 +16,7 @@ class DogViewModel: ViewModel() {
     var isCorrect = MutableLiveData(false)
     var currentDog = MutableLiveData<Dog>()
     var currentIndex = 0
-    var listOfFive = ObservableArrayList<Dog>()
+    var listOfN = ObservableArrayList<Dog>()
     var random3 = ObservableArrayList<String>()
     var isRandom = MutableLiveData(false)
     var generateNewListOf5 = MutableLiveData(true)
@@ -31,6 +31,7 @@ class DogViewModel: ViewModel() {
             dogs.addAll(loadedDogs)
             val loadedDogsInOrder = DogRepository.orderByName()
             dogsInOrder.addAll(loadedDogsInOrder)
+            getRandom()
         }
     }
 
@@ -75,12 +76,15 @@ class DogViewModel: ViewModel() {
         }
     }
 
-    fun getRandom(id: Int): List<Dog> {
-        var randDogs : List<Dog> = listOf()
+    fun getRandom() {
         viewModelScope.launch {
-            randDogs = DogRepository.getRandom(id)
+            val newList = DogRepository.getRandom(5)
+            listOfN.addAll(newList)
+            generateNewListOf5.value = false
+            currentDog.value = listOfN[currentIndex]
+            getRandom3()
+            isRandom.value = true
         }
-        return randDogs
     }
 
     fun orderByName() {
@@ -109,21 +113,23 @@ class DogViewModel: ViewModel() {
             return
         }
 
-        if (currentIndex >= listOfFive.size) {
+        if (currentIndex == listOfN.size - 1) {
+            listOfN.clear()
             generateNewListOf5.value = true
+            currentIndex = 0
             return
         }
 
         currentIndex += 1
-        viewModelScope.launch {
-            currentDog.value = listOfFive[currentIndex]
-        }
+        currentDog.value = listOfN[currentIndex]
         isRandom.value = false
+        getRandom3()
     }
     fun getRandom3() {
         viewModelScope.launch {
+            random3.clear()
             random3.addAll(DogRepository.getRandom3(currentDog.value!!.name))
-            random3.add((-1..2).shuffled().last(), currentDog.value!!.name)
+            random3.add((0..2).shuffled().last(), currentDog.value!!.name)
             generateNewListOf5.value = false
             isRandom.value = true
         }

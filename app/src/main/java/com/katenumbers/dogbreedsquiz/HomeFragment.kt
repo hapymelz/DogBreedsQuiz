@@ -27,7 +27,9 @@ class HomeFragment : Fragment() {
         }
 
         binding.quizButton.setOnClickListener {
-            findNavController().navigate(R.id.home_to_quiz)
+            if (viewModel.generateNewListOf5.value == false) {
+                findNavController().navigate(R.id.home_to_quiz)
+            }
         }
 
 

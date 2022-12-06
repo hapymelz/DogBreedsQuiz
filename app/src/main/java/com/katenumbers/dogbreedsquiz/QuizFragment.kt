@@ -28,7 +28,7 @@ class QuizFragment : Fragment() {
 
         viewModel.generateNewListOf5.observe(viewLifecycleOwner) {
             if (it) {
-                viewModel.getRandom3()
+                viewModel.getRandom()
                 findNavController().navigateUp()
             }
         }
@@ -39,6 +39,12 @@ class QuizFragment : Fragment() {
 
         binding.answerButton1.setOnClickListener {
             viewModel.checkAnswer(binding.answerButton1.text.toString())
+        }
+        binding.answerButton2.setOnClickListener {
+            viewModel.checkAnswer(binding.answerButton2.text.toString())
+        }
+        binding.answerButton3.setOnClickListener {
+            viewModel.checkAnswer(binding.answerButton3.text.toString())
         }
 
         viewModel.currentDog.observe(viewLifecycleOwner) {
