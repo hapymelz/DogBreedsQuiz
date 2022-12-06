@@ -68,4 +68,9 @@ object DogRepository {
     suspend fun  deleteExtras() {
         return db.dogDao().deleteExtras()
     }
+
+    suspend fun getRandom3(name: String): List<String> {
+        return db.dogDao().getRandom3(name)
+    }
+
 }

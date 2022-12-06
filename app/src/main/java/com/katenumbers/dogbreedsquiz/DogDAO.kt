@@ -44,4 +44,7 @@ interface DogDAO {
 
     @Query("DELETE FROM dog WHERE id NOT BETWEEN 1 AND 353")
     suspend fun deleteExtras()
+
+    @Query("SELECT name FROM dog WHERE name != :name ORDER BY RANDOM() LIMIT 2")
+    suspend fun getRandom3(name: String): List<String>
 }

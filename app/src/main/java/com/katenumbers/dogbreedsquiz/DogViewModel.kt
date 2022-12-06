@@ -12,7 +12,15 @@ class DogViewModel: ViewModel() {
     var dogsInOrder = ObservableArrayList<Dog>()
     var dogsLoadedInOrder = MutableLiveData(false)
     var dogs = ObservableArrayList<Dog>()
-    var dogsLoaded = MutableLiveData(false)
+    var correctText = MutableLiveData("")
+    var isCorrect = MutableLiveData(false)
+    var currentDog = MutableLiveData<Dog>()
+    var currentIndex = 0
+    var listOfFive = ObservableArrayList<Dog>()
+    var random3 = ObservableArrayList<String>()
+    var isRandom = MutableLiveData(false)
+    var generateNewListOf5 = MutableLiveData(true)
+
 
     init {
         loadDogs()
@@ -89,6 +97,37 @@ class DogViewModel: ViewModel() {
         }
     }
 
+    fun checkAnswer(dogName: String) {
+        correctText.value = ""
+
+        if (dogName != currentDog.value?.name) {
+            correctText.value = "INCORRECT"
+            viewModelScope.launch {
+                delay(3000)
+                correctText.value = ""
+            }
+            return
+        }
+
+        if (currentIndex >= listOfFive.size) {
+            generateNewListOf5.value = true
+            return
+        }
+
+        currentIndex += 1
+        viewModelScope.launch {
+            currentDog.value = listOfFive[currentIndex]
+        }
+        isRandom.value = false
+    }
+    fun getRandom3() {
+        viewModelScope.launch {
+            random3.addAll(DogRepository.getRandom3(currentDog.value!!.name))
+            random3.add((-1..2).shuffled().last(), currentDog.value!!.name)
+            generateNewListOf5.value = false
+            isRandom.value = true
+        }
+    }
 
 //    fun getFirstRow(): Dog {
 //        var dog : Dog

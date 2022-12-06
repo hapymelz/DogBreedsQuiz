@@ -26,6 +26,10 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.quizButton.setOnClickListener {
+            findNavController().navigate(R.id.home_to_quiz)
+        }
+
 
         return binding.root
     }

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/home_to_data"
             app:destination="@id/dataFragment" />
+        <action
+            android:id="@+id/home_to_quiz"
+            app:destination="@id/quizFragment" />
     </fragment>
     <fragment
         android:id="@+id/dataFragment"
@@ -28,4 +31,9 @@
         android:name="com.katenumbers.dogbreedsquiz.DogFragment"
         android:label="fragment_dog"
         tools:layout="@layout/fragment_dog" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.katenumbers.dogbreedsquiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 </navigation>

@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="407dp"
+        android:layout_height="349dp"
+        android:background="#0079F7"
+        android:src="@drawable/dogs"
+        app:layout_constraintBottom_toTopOf="@+id/dataButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/dataButton"
         android:layout_width="wrap_content"
@@ -15,6 +26,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
+
+    <Button
+        android:id="@+id/quizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"
+        app:layout_constraintEnd_toEndOf="@+id/dataButton"
+        app:layout_constraintStart_toStartOf="@+id/dataButton"
+        app:layout_constraintTop_toBottomOf="@+id/dataButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
