@@ -72,5 +72,4 @@ object DogRepository {
     suspend fun getRandom3(name: String): List<String> {
         return db.dogDao().getRandom3(name)
     }
-
 }

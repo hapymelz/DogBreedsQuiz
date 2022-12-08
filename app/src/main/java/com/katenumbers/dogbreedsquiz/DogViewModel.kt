@@ -20,6 +20,7 @@ class DogViewModel: ViewModel() {
     var random3 = ObservableArrayList<String>()
     var isRandom = MutableLiveData(false)
     var generateNewListOf5 = MutableLiveData(true)
+    var isLoaded = MutableLiveData(false)
 
 
     init {
@@ -27,6 +28,7 @@ class DogViewModel: ViewModel() {
     }
     private fun loadDogs() {
         viewModelScope.launch {
+
             val loadedDogs = DogRepository.getAll()
             dogs.addAll(loadedDogs)
             val loadedDogsInOrder = DogRepository.orderByName()
@@ -37,7 +39,9 @@ class DogViewModel: ViewModel() {
 
     fun createDog(row: List<String>, resourceID: Int) {
         viewModelScope.launch {
+            println("__${resourceID}__") // This number, and dog.image below, are both the same
             val dog = Dog(id = 0, name = row[1], section = row[2], group = row[3], country = row[4], image = resourceID)
+            println("__${dog.image}__")
             DogRepository.createDog(dog)
         }
     }
@@ -50,6 +54,7 @@ class DogViewModel: ViewModel() {
         viewModelScope.launch {
             val loadedTable = TableMade(id = 0, loaded = "false")
             DogRepository.createLoaded(loadedTable)
+            isLoaded.value = true
         }
     }
 
@@ -134,12 +139,4 @@ class DogViewModel: ViewModel() {
             isRandom.value = true
         }
     }
-
-//    fun getFirstRow(): Dog {
-//        var dog : Dog
-//        viewModelScope.launch {
-//            dog = DogRepository.getFirstRow()
-//        }
-//        return dog
-//    }
 }

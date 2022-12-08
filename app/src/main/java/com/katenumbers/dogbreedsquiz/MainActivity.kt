@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         val reader = BufferedReader(mInput)
         var line : String
 
-        while (reader.readLine().also { it.also { line = it } } != "END") {
+        viewModel.createLoaded()
+
+        while (reader.readLine().also { line = it } != "END") {
             val row: List<String> = line.split(",").toList()
             var imageName = editImageName(row[5])
             val resourceID = getResourceID(imageName)
@@ -29,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         println("DONE!")
 
-        setContentView(R.layout.activity_main)
         viewModel.deleteExtras()
+        setContentView(R.layout.activity_main)
     }
 
     private fun getResourceID(imageName: String): Int {

@@ -22,7 +22,10 @@ class DataFragment : Fragment() {
 
 
         println("ORDERING DOGS...")
-
+        for (dog in viewModel.dogsInOrder) {
+            println(dog.name)
+        }
+        println(viewModel.dogsInOrder.size)
         fun onDogClick(dog: Dog) {
             findNavController().navigate(R.id.data_to_dog)
         }
