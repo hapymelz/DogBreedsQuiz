@@ -16,7 +16,7 @@ class QuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentQuizBinding.inflate(inflater, container, false)
-        val viewModel : DogViewModel by activityViewModels()
+        val viewModel : DogQuizViewModel by activityViewModels()
 
         viewModel.isRandom.observe(viewLifecycleOwner) {
             if (it) {
@@ -52,6 +52,12 @@ class QuizFragment : Fragment() {
             binding.sectionQuiz.text = viewModel.currentDog.value!!.section
             binding.groupQuiz.text = viewModel.currentDog.value!!.group
             binding.countryQuiz.text = viewModel.currentDog.value!!.country
+        }
+
+        viewModel.roundDone.observe(viewLifecycleOwner) {
+            if (it) {
+                findNavController().navigate(R.id.quiz_to_score)
+            }
         }
 
         return binding.root

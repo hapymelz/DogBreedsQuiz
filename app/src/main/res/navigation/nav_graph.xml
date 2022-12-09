@@ -35,5 +35,18 @@
         android:id="@+id/quizFragment"
         android:name="com.katenumbers.dogbreedsquiz.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/quiz_to_score"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.katenumbers.dogbreedsquiz.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/score_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

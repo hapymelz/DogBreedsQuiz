@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.katenumbers.dogbreedsquiz.databinding.FragmentDataBinding
 import com.katenumbers.dogbreedsquiz.models.Dog
+import java.util.Collections.addAll
 
 class DataFragment : Fragment() {
     override fun onCreateView(
@@ -17,7 +18,7 @@ class DataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentDataBinding.inflate(inflater, container, false)
-        val viewModel : DogViewModel by activityViewModels()
+        val viewModel : DogDataViewModel by activityViewModels()
 
 
 
@@ -25,14 +26,21 @@ class DataFragment : Fragment() {
         for (dog in viewModel.dogsInOrder) {
             println(dog.name)
         }
-        println(viewModel.dogsInOrder.size)
+
+        var setOfDogs = mutableSetOf<Dog>()
+
+        for (dog in viewModel.dogsInOrder) {
+            setOfDogs.add(dog)
+        }
+
+        println(setOfDogs.size)
         fun onDogClick(dog: Dog) {
             findNavController().navigate(R.id.data_to_dog)
         }
 
 
 
-        binding.recyclerView.adapter = DogAdapter(viewModel.dogsInOrder)
+        binding.recyclerView.adapter = DogAdapter(setOfDogs.toList())
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
 

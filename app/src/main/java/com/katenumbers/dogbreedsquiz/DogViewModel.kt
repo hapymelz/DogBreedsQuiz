@@ -9,17 +9,7 @@ import com.katenumbers.dogbreedsquiz.models.TableMade
 import kotlinx.coroutines.*
 
 class DogViewModel: ViewModel() {
-    var dogsInOrder = ObservableArrayList<Dog>()
-    var dogsLoadedInOrder = MutableLiveData(false)
     var dogs = ObservableArrayList<Dog>()
-    var correctText = MutableLiveData("")
-    var isCorrect = MutableLiveData(false)
-    var currentDog = MutableLiveData<Dog>()
-    var currentIndex = 0
-    var listOfN = ObservableArrayList<Dog>()
-    var random3 = ObservableArrayList<String>()
-    var isRandom = MutableLiveData(false)
-    var generateNewListOf5 = MutableLiveData(true)
     var isLoaded = MutableLiveData(false)
     var firstRow = ""
 
@@ -30,12 +20,9 @@ class DogViewModel: ViewModel() {
     private fun loadDogs() {
         viewModelScope.launch {
             deleteExtras()
-            getFirstRow()
+            firstRow()
             val loadedDogs = DogRepository.getAll()
             dogs.addAll(loadedDogs)
-            val loadedDogsInOrder = DogRepository.orderByName()
-            dogsInOrder.addAll(loadedDogsInOrder)
-            getRandom()
         }
     }
 
@@ -83,68 +70,21 @@ class DogViewModel: ViewModel() {
         }
     }
 
-    fun getRandom() {
-        viewModelScope.launch {
-            val newList = DogRepository.getRandom(5)
-            listOfN.addAll(newList)
-            generateNewListOf5.value = false
-            currentDog.value = listOfN[currentIndex]
-            getRandom3()
-            isRandom.value = true
-        }
-    }
-
-    fun orderByName() {
-        viewModelScope.launch {
-            val dogsList = DogRepository.orderByName()
-            dogsInOrder.addAll(dogsList)
-            dogsLoadedInOrder.value = true
-        }
-    }
-
     fun deleteExtras() {
         viewModelScope.launch {
             DogRepository.deleteExtras()
         }
     }
 
-    fun checkAnswer(dogName: String) {
-        correctText.value = ""
-
-        if (dogName != currentDog.value?.name) {
-            correctText.value = "INCORRECT"
-            viewModelScope.launch {
-                delay(3000)
-                correctText.value = ""
+    fun firstRow() {
+        viewModelScope.launch {
+            val first = DogRepository.getFirstRow()
+            if (first == null) {
+                firstRow = ""
             }
-            return
-        }
-
-        if (currentIndex == listOfN.size - 1) {
-            listOfN.clear()
-            generateNewListOf5.value = true
-            currentIndex = 0
-            return
-        }
-
-        currentIndex += 1
-        currentDog.value = listOfN[currentIndex]
-        isRandom.value = false
-        getRandom3()
-    }
-    fun getRandom3() {
-        viewModelScope.launch {
-            random3.clear()
-            random3.addAll(DogRepository.getRandom3(currentDog.value!!.name))
-            random3.add((0..2).shuffled().last(), currentDog.value!!.name)
-            generateNewListOf5.value = false
-            isRandom.value = true
-        }
-    }
-
-    fun getFirstRow() {
-        viewModelScope.launch {
-            firstRow = DogRepository.getFirstRow()
+            else {
+                firstRow = first
+            }
         }
     }
 }

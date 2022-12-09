@@ -16,18 +16,19 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val viewModel : DogViewModel by activityViewModels()
-        val dogsInOrder = viewModel.orderByName()
+        val dataViewModel : DogDataViewModel by activityViewModels()
+        val quizViewModel : DogQuizViewModel by activityViewModels()
+        val dogsInOrder = dataViewModel.orderByName()
 
 
         binding.dataButton.setOnClickListener {
-            if (viewModel.dogsLoadedInOrder.value == true) {
+            if (dataViewModel.dogsLoadedInOrder.value == true) {
                 findNavController().navigate(R.id.home_to_data)
             }
         }
 
         binding.quizButton.setOnClickListener {
-            if (viewModel.generateNewListOf5.value == false) {
+            if (quizViewModel.generateNewListOf5.value == false) {
                 findNavController().navigate(R.id.home_to_quiz)
             }
         }
