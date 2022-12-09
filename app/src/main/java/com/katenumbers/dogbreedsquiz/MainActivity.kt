@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         val reader = BufferedReader(mInput)
         var line : String
 
-        viewModel.createLoaded()
 
         while (reader.readLine().also { line = it } != "END") {
             val row: List<String> = line.split(",").toList()

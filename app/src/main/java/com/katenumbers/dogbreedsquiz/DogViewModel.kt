@@ -21,6 +21,7 @@ class DogViewModel: ViewModel() {
     var isRandom = MutableLiveData(false)
     var generateNewListOf5 = MutableLiveData(true)
     var isLoaded = MutableLiveData(false)
+    var firstRow = ""
 
 
     init {
@@ -28,7 +29,8 @@ class DogViewModel: ViewModel() {
     }
     private fun loadDogs() {
         viewModelScope.launch {
-
+            deleteExtras()
+            getFirstRow()
             val loadedDogs = DogRepository.getAll()
             dogs.addAll(loadedDogs)
             val loadedDogsInOrder = DogRepository.orderByName()
@@ -137,6 +139,12 @@ class DogViewModel: ViewModel() {
             random3.add((0..2).shuffled().last(), currentDog.value!!.name)
             generateNewListOf5.value = false
             isRandom.value = true
+        }
+    }
+
+    fun getFirstRow() {
+        viewModelScope.launch {
+            firstRow = DogRepository.getFirstRow()
         }
     }
 }

@@ -61,7 +61,7 @@ object DogRepository {
         return db.dogDao().getRandom(n)
     }
 
-    suspend fun getFirstRow(): Dog {
+    suspend fun getFirstRow(): String {
         return db.dogDao().getFirstRow()
     }
 
